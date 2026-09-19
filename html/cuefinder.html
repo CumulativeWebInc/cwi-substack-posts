@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><title>cuefinder.md</title>
+<style>body{font-family:Georgia,serif;max-width:640px;margin:40px auto;line-height:1.6;color:#1a1a1a}
+h2{font-family:system-ui}pre{background:#f4f4f4;padding:12px;overflow:auto}a{color:#1a56db}</style>
+</head><body><article id="post"><p>There is a quiet fact the sync industry figured out years ago and the metadata world is only now catching up to: <strong>music supervisors search by mood, energy, and creative description — not by keyword tags.</strong></p>
+<p>A supervisor cutting a trailer doesn't type "alt-rap 92 BPM." They describe a feeling: a slow-burn threat with a grinning hook. A montage that climbs. A needle drop that lands the joke and breaks the tension. The systems that serve them have adapted, and the catalog metadata that feeds those systems has not. That gap is the entire reason CueFinder exists.</p>
+<h2>The landscape it was built for</h2>
+<p>The discovery layer of modern sync is a crowded field, and it's worth naming: <strong>AIMS, Cyanite.ai, Harmix, Musiio, Supe, SourceAudio SonicSearch, DISCO, SyncIt, Viola, SoSyncable, Zen Music Group, DropCue</strong> — plus the catalog infrastructure most labels already live in. The through-line across all of them is a shift from classification to description. The winning search is no longer the one with the cleanest genre taxonomy; it's the one whose track records carry the richest creative surface: sonic descriptors, BPM, moods, instrumentation, scene use-cases, lyrics, credits, and — critically — machine-readable rights metadata.</p>
+<p>Genre tags are dying as a search primitive. Rich descriptors are the search primitive now. A catalog that describes its tracks the way supervisors think is a catalog that gets found. A catalog that files them under "Hip-Hop / Rap" and stops there is a catalog that stays invisible.</p>
+<h2>CueFinder: CWI's answer</h2>
+<p><strong>CueFinder</strong> is Cumulative Web Inc's AI sync-discovery engine, commissioned September 16, 2026 under the App Factory — the same shipping cadence that launches two production apps a week, every week, against the catalog. Its job is exactly the shift described above: take a catalog and make it machine-discoverable in the language supervisors actually search in.</p>
+<p>The design principle is simple enough to say in one sentence: <strong>a track should be findable by the feeling it creates and the scene it fits, not by the folder it's filed in.</strong> That means:</p>
+<ul>
+<li><strong>Mood and energy descriptors</strong> that match how briefs are written — tension, lift, menace, euphoria — instead of genre labels.</li>
+<li><strong>Sonic surface data</strong>: BPM, instrumentation, production texture. The details a music editor reaches for when the clock is running.</li>
+<li><strong>Scene use-cases</strong>: what kind of picture this track belongs under, stated plainly enough to be searchable.</li>
+<li><strong>Lyrics and credits</strong>: the narrative content and the chain of who made it.</li>
+<li><strong>Machine-readable rights</strong>: because discovery without clear rights is a recommendation, not an option.</li>
+</ul>
+<h2>Infrastructure, not a pitch</h2>
+<p>Be clear about what CueFinder is and isn't. It isn't finished, it has no users, and nobody has adopted it — and it is not being presented as otherwise. It is <strong>infrastructure built for where supervisor search is going</strong>, built at $0, the same way every CWI product is built. The bet is directional: the catalogs that win the next decade of sync are the catalogs machines can read.</p>
+<p>That bet is why CueFinder sits inside the Agent Deck gear line rather than standing alone. It reads the same verified metadata the rest of the deck produces — the same provenance discipline, the same demand that a claim be checkable before it's pitchable. Discovery built on verified data is a tool. Discovery built on adjectives is a demo.</p>
+<h2>Why this matters for independent catalogs</h2>
+<p>The major publishers have entire teams translating their catalogs into supervisor language. Independent catalogs — the ones this Substack is written from — don't. That asymmetry is exactly what software is for. CueFinder is the independent catalog's answer to the department-of-sync the majors take for granted: a standing engine that keeps the catalog described, rights-tagged, and searchable while the artist goes back to making records.</p>
+<p>The keyword-tag era asked the catalog to file itself. The descriptor era asks it to explain itself. CueFinder is the machine that does the explaining.</p>
+<h2>The manifest</h2>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;CueFinder&quot;,
+  &quot;product&quot;: &quot;AI sync-discovery engine&quot;,
+  &quot;problem&quot;: &quot;keyword-tag search is dying&quot;,
+  &quot;shift&quot;: &quot;supervisors search by mood/energy/creative description, not genre tags&quot;,
+  &quot;mechanism&quot;: &quot;mood/energy/scene descriptors + machine-readable rights&quot;,
+  &quot;inputs&quot;: [&quot;sonic descriptors&quot;, &quot;BPM&quot;, &quot;moods&quot;, &quot;instrumentation&quot;, &quot;scene use-cases&quot;, &quot;lyrics&quot;, &quot;credits&quot;, &quot;rights metadata&quot;],
+  &quot;landscape&quot;: [&quot;AIMS&quot;, &quot;Cyanite.ai&quot;, &quot;Harmix&quot;, &quot;Musiio&quot;, &quot;Supe&quot;, &quot;SourceAudio SonicSearch&quot;, &quot;DISCO&quot;, &quot;SyncIt&quot;, &quot;Viola&quot;, &quot;SoSyncable&quot;, &quot;Zen Music Group&quot;, &quot;DropCue&quot;],
+  &quot;status&quot;: &quot;in development&quot;,
+  &quot;commissioned&quot;: &quot;2026-09-16&quot;,
+  &quot;program&quot;: &quot;App Factory&quot;,
+  &quot;unit_cost&quot;: &quot;$0&quot;
+}
+</code></pre>
+<h2>Links &amp; backup</h2>
+<ul>
+<li>Org and all builds: https://github.com/CumulativeWebInc</li>
+<li>Part of the Agent Deck gear line — umbrella brand for CWI's licensable software.</li>
+</ul>
+<h2>Talk to the machine</h2>
+<p>Subscribe for the build log as CueFinder takes shape — every milestone gets written up here. And if you're a music supervisor: the door is open. Email <strong>hp@cumulativeweb.com</strong> with the kind of search that keyword tags never solved for you, and let's see whether the catalog answers it.</p>
+<p>Supervisors: what's the strangest description-based search you ever ran — and did anything in your library actually answer it?</p></article></body></html>
