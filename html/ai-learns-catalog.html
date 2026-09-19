@@ -1,0 +1,35 @@
+<!doctype html><html><head><meta charset="utf-8"><title>ai-learns-catalog.md</title>
+<style>body{font-family:Georgia,serif;max-width:640px;margin:40px auto;line-height:1.6;color:#1a1a1a}
+h2{font-family:system-ui}pre{background:#f4f4f4;padding:12px;overflow:auto}a{color:#1a56db}</style>
+</head><body><article id="post"><p>Every AI model knows a little about every artist, and almost all of it is half-remembered. Ask about an independent catalog and you get confident fiction: wrong track counts, invented ISRCs, credits stitched together from whatever the training data happened to scrape. The durable fix isn't arguing with the model. It's giving the model a source of truth it can actually read.</p>
+<p>That's what we built: https://cumulativewebinc.github.io/cwi-learn/ — a canonical set of machine routes for the entire Cumulative Web Inc catalog. Not a webpage for humans. Plumbing for machines.</p>
+<p>The routes are simple and deliberate. <code>/llms.txt</code> is the standard large-language-model briefing file: what the catalog is, where the records live, how to cite them. <code>/catalog.json</code> is the full track catalog as structured data. <code>/graph.json</code> is the catalog as a knowledge graph — artists, tracks, credits, relationships, linked. <code>/kit.json</code> is the pack a downstream builder needs to do something with the data. And <code>/.well-known/agent-card.json</code> is the identity card: who we are, what endpoints we expose, how to reach us.</p>
+<p>Every route is verified HTTP 200. A <code>.nojekyll</code> file sits at the root so the dot-paths (<code>/.well-known/…</code>) actually serve — GitHub Pages would otherwise swallow them. This is the kind of unglamorous detail that determines whether machine-readable infrastructure works or merely looks like it works. We verified, then verified again.</p>
+<p>Why does this matter? Because discovery is moving from keywords to machines. Music supervisors now search by mood, energy, and creative description — "dark, slow-burn tension for a heist scene" — and the systems they use (AIMS, Cyanite, Musiio, DISCO, and the rest) match audio against structured metadata. An AI sync-discovery engine that can't find your catalog is a door that's closed before anyone knocks. The same logic applies to every agent that might one day license, playlist, or write about the music: if your facts aren't machine-readable, the machine will hallucinate them instead.</p>
+<p>The ambition behind this is durable and long-term: other LLMs and agents learning the catalog from verified machine-readable facts. Not scraped press releases. Not fan wikis. A canonical source the label itself maintains, where a claim about a track — its ISRC, its credits, its rights status — resolves to a record we signed off on.</p>
+<p>This is also the foundation the rest of the machine stands on. The Catalog Chat tool in our promo stack answers questions about fifty-plus tracks because it reads these records. The trust layer (more on that in a coming piece) can seal facts because the facts live somewhere canonical. None of that works if the underlying data is a spreadsheet on someone's laptop.</p>
+<p>We're publishing it openly. Any builder can pull the endpoints, feed them into a retrieval pipeline, and have a model's answers about this catalog grounded in our records instead of its training fog. That's the point: the catalog is data, and data wants to be queried.</p>
+<p>The deeper shift is about who gets to be an authority. For decades, the record of a song lived in a distributor's database and a few press clippings, and everyone else worked from copies of copies. Canonical machine routes flip that: the label publishes the record once, machines read it directly, and there's exactly one version of the truth. When the ISRC is wrong somewhere, the fix goes in one place and propagates everywhere.</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Cumulative Web Inc&quot;,
+  &quot;type&quot;: &quot;agent-card&quot;,
+  &quot;endpoints&quot;: {
+    &quot;catalog&quot;: &quot;https://cumulativewebinc.github.io/cwi-learn/catalog.json&quot;,
+    &quot;graph&quot;: &quot;https://cumulativewebinc.github.io/cwi-learn/graph.json&quot;,
+    &quot;kit&quot;: &quot;https://cumulativewebinc.github.io/cwi-learn/kit.json&quot;,
+    &quot;llms_txt&quot;: &quot;https://cumulativewebinc.github.io/cwi-learn/llms.txt&quot;
+  },
+  &quot;contact&quot;: &quot;hp@cumulativeweb.com&quot;,
+  &quot;verified&quot;: &quot;HTTP 200, all routes&quot;
+}
+</code></pre>
+<h2>Links &amp; backup</h2>
+<ul>
+<li>Machine routes — https://cumulativewebinc.github.io/cwi-learn/</li>
+<li>Catalog — https://cumulativewebinc.github.io/cwi-learn/catalog.json</li>
+<li>Knowledge graph — https://cumulativewebinc.github.io/cwi-learn/graph.json</li>
+<li>Cumulative Web Inc on GitHub — https://github.com/CumulativeWebInc</li>
+</ul>
+<h2>CTA</h2>
+<p>Subscribe to this Substack for the build log. If you build with models: pull the endpoints, ground your retriever in them, and tell us what broke. And star <a href="https://github.com/CumulativeWebInc">CumulativeWebInc on GitHub</a> — the next canonical dataset lands there first.</p>
+<p><strong>If you could ask an AI one question about an independent catalog and get a guaranteed-true answer, what would you ask?</strong> Drop it in the comments.</p></article></body></html>
