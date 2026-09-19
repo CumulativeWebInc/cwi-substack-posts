@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><title>agent-deck.md</title>
+<style>body{font-family:Georgia,serif;max-width:640px;margin:40px auto;line-height:1.6;color:#1a1a1a}
+h2{font-family:system-ui}pre{background:#f4f4f4;padding:12px;overflow:auto}a{color:#1a56db}</style>
+</head><body><article id="post"><p>A record label used to be a building full of people. Cumulative Web Inc decided it should be a system full of gear.</p>
+<p><strong>Agent Deck</strong> is the name Black gave the AI app that holds the whole thing together: the umbrella brand for the gear line — Signal Boy, the Gear Ledger, and eight department products — where every product is a SKU on the same shelf. Not eight startups. Not eight pilots. One deck, one release cadence, one standard: production software, tested, deployed, real.</p>
+<h2>The department stack</h2>
+<p>CWI's agent company runs on eight departments: A&amp;R, Marketing &amp; Social, Sync &amp; Licensing, Radio &amp; Playlists, Press &amp; PR, Content Studio, Data &amp; Analytics, and Business Affairs. The products follow the same order, and they are built in dependency order on purpose — because a gear line that ignores its own dependencies is a gear line that breaks:</p>
+<ol>
+<li><strong>Data &amp; Analytics</strong> — the foundation. Every downstream product reads from it.</li>
+<li><strong>Business Affairs</strong> — licensing terms and rights scaffolding before anyone pitches anything.</li>
+<li><strong>A&amp;R, Sync &amp; Licensing, Press &amp; PR</strong> — the discovery-to-deal layer.</li>
+<li><strong>Marketing &amp; Social, Radio &amp; Playlists</strong> — distribution and audience reach.</li>
+<li><strong>Content Studio</strong> — creative output that assumes the pipeline above it already works.</li>
+</ol>
+<p>Data goes first because nothing else can verify its own claims without it. Affairs goes second because rights questions are cheapest to answer before a pitch exists. The rest stack on top. This is boring architecture and that is the point — the boring part is what keeps every SKU honest about what it actually does.</p>
+<h2>Every product is a SKU, not a demo</h2>
+<p>The standing rule on this gear line: real software, never simulations. Each department product is designed from day one as a licensable SKU — white-label ready, with a clear manifest of what it does, what it reads, and what it outputs. That discipline does two things at once. Internally, it forces every build to define its inputs and outputs instead of hand-waving. Externally, it means any product that proves itself in-house is already packaged for the world.</p>
+<p>The builds are done at $0 and deployed on GitHub Pages — zero marginal cost per product, zero hosting bills to justify. When the cost of shipping is zero, the only reason a product doesn't exist is that nobody built it yet.</p>
+<h2>The App Factory: two a week, every week</h2>
+<p>Keeping up with that is the <strong>App Factory</strong>, CWI's standing shipping schedule: a minimum of <strong>two new production apps per week</strong>, every Monday and Thursday, every week. Each one uses the catalog in some way — because the catalog is the asset the whole machine exists to serve, and software that doesn't touch it is a hobby.</p>
+<p>The factory is the part of Agent Deck most people underestimate. It's easy to build a product; it's hard to build a release cadence that survives week eleven. The factory treats cadence as the product. Monday and Thursday are launch days. The standard doesn't move for the calendar.</p>
+<h2>What this means for the artist</h2>
+<p>For That Boy Hi Hat, the catalog is the raw material and Agent Deck is the refinery. Sync discovery tools that read machine-verified metadata instead of guesses. Playlist infrastructure that verifies placements by scan instead of claims. Verification artifacts that let a supervisor confirm a catalog fact without calling a manager's bluff. Every piece of the deck exists to answer one question an artist's team never stops asking: <em>how do we get this music heard, and how do we prove what we say about it?</em></p>
+<p>Nothing here is speculative. The deck is the working answer — built, tested, shipped, and iterated in the open.</p>
+<h2>The manifest</h2>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Agent Deck&quot;,
+  &quot;umbrella_brand&quot;: &quot;Agent Deck — umbrella brand for the CWI gear line&quot;,
+  &quot;products&quot;: [&quot;Signal Boy&quot;, &quot;Gear Ledger&quot;, &quot;8 department SKUs&quot;],
+  &quot;departments&quot;: [
+    &quot;Data &amp; Analytics&quot;,
+    &quot;Business Affairs&quot;,
+    &quot;A&amp;R&quot;,
+    &quot;Sync &amp; Licensing&quot;,
+    &quot;Press &amp; PR&quot;,
+    &quot;Marketing &amp; Social&quot;,
+    &quot;Radio &amp; Playlists&quot;,
+    &quot;Content Studio&quot;
+  ],
+  &quot;build_order&quot;: &quot;Data → Affairs → A&amp;R/Sync/Press → Marketing/Radio → Studio&quot;,
+  &quot;factory_cadence&quot;: &quot;2/week&quot;,
+  &quot;factory_schedule&quot;: &quot;Monday + Thursday, every week&quot;,
+  &quot;license_note&quot;: &quot;white-label/licensable SKUs&quot;,
+  &quot;unit_cost&quot;: &quot;$0&quot;,
+  &quot;hosting&quot;: &quot;GitHub Pages&quot;
+}
+</code></pre>
+<h2>Links &amp; backup</h2>
+<ul>
+<li>Org and all builds: https://github.com/CumulativeWebInc</li>
+<li>The Agent Deck umbrella is the Cumulative Web Inc gear line — watch the org for new SKUs every Monday and Thursday.</li>
+</ul>
+<h2>Get the next drop</h2>
+<p>If you're following this build in public, subscribe to this Substack — every launch and lesson gets written up here. And star the org on GitHub (<a href="https://github.com/CumulativeWebInc">github.com/CumulativeWebInc</a>) so the shipping cadence is visible in your feed.</p>
+<p>What should the App Factory build next — which lane of the label needs gear the most?</p></article></body></html>
