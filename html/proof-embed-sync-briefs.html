@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><title>proof-embed-sync-briefs.md</title>
+<style>body{font-family:Georgia,serif;max-width:640px;margin:40px auto;line-height:1.6;color:#1a1a1a}
+h2{font-family:system-ui}pre{background:#f4f4f4;padding:12px;overflow:auto}a{color:#1a56db}</style>
+</head><body><article id="post"><p>Sync pitching runs on adjectives. "Huge sync potential." "Perfect for film." "One of the hottest records of the year." Supervisors have heard all of it, believed none of it, and the catalogs that win are the ones that arrive with something better than a paragraph: <strong>verifiable proof.</strong></p>
+<p>Cumulative Web Inc's sync verification stack is two products built to do exactly that — give a music supervisor evidence-tiered proof of catalog claims instead of hype. Both are live, both are tested, and both carry kill rules with dates, because tools that don't get used don't deserve to exist.</p>
+<h2>Catalog Proof Embed</h2>
+<p>The <strong>Catalog Proof Embed</strong> (https://cumulativewebinc.github.io/cwi-proof-embed/) is the shareable unit of proof: an embeddable artifact that carries a catalog claim together with the evidence behind it. The idea is disarmingly simple — instead of telling a supervisor a track is verified, you hand them the verification itself, in a form they can check.</p>
+<p>The specs: repo at https://github.com/CumulativeWebInc/cwi-proof-embed, <strong>35/35 tests green</strong>, built at $0 on GitHub Pages. And the accountability clause: <strong>fewer than 10 third-party embeds by December 18, 2026, and the lane dies.</strong> That's not marketing copy — it's a kill rule. If supervisors aren't embedding the proof, the proof isn't useful enough, and the honest move is to kill it and build what is. The rule is public because the failure mode of software without a kill rule is a portfolio of dashboards nobody opens.</p>
+<h2>Sync Briefs</h2>
+<p>The <strong>Sync Briefs</strong> (https://cumulativewebinc.github.io/cwi-sync-briefs/) are the other half of the stack: nine evidence-tiered sync briefs, each one a structured pitch artifact that organizes a catalog claim by the strength of the evidence behind it. Not all proof is equal — a DistroKid-dashboard ISRC sits at a different tier than a scraped public page, and a brief that hides that difference is a brief that lies by formatting. The tiering is the product.</p>
+<p>The specs: repo at https://github.com/CumulativeWebInc/cwi-sync-briefs, <strong>20/20 tests green</strong>, nine briefs live. Kill rule: <strong>fewer than 25 briefs by December 18, 2026.</strong> Nine exist now; the rule says twenty-five or the lane closes. Kill rules aren't pessimism — they're how you keep a build honest about the difference between activity and results.</p>
+<h2>Why evidence tiers matter</h2>
+<p>The music industry's credibility problem in sync isn't that catalogs lie — it's that catalogs present every claim at the same confidence level. The stream count from a distributor dashboard and the stream count from a screenshot of a screenshot get the same font, the same placement, the same weight. A supervisor who's been burned once learns to discount everything by half. Everybody loses.</p>
+<p>Evidence tiering fixes this at the artifact level. When a brief distinguishes between what was verified from the distributor, what was verified from a public source, and what's a claim awaiting verification, the supervisor doesn't have to guess — and the catalog that plays straight earns the trust that compounds. Proof is a marketing strategy. It's just one that only works if the proof is real.</p>
+<p>This is the through-line of the whole Agent Deck gear line: verified or it didn't happen. The Beat Lab labels estimates as estimates. CueFinder builds on verified metadata. The proof stack exists because the industry standard — adjectives — was never a standard at all.</p>
+<h2>The manifest</h2>
+<pre><code class="language-json">{
+  &quot;products&quot;: [
+    {
+      &quot;name&quot;: &quot;Catalog Proof Embed&quot;,
+      &quot;live_url&quot;: &quot;https://cumulativewebinc.github.io/cwi-proof-embed/&quot;,
+      &quot;repo&quot;: &quot;https://github.com/CumulativeWebInc/cwi-proof-embed&quot;,
+      &quot;tests&quot;: &quot;35/35&quot;,
+      &quot;kill_rule&quot;: &quot;fewer than 10 third-party embeds by 2026-12-18&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Sync Briefs&quot;,
+      &quot;live_url&quot;: &quot;https://cumulativewebinc.github.io/cwi-sync-briefs/&quot;,
+      &quot;repo&quot;: &quot;https://github.com/CumulativeWebInc/cwi-sync-briefs&quot;,
+      &quot;tests&quot;: &quot;20/20&quot;,
+      &quot;briefs&quot;: 9,
+      &quot;evidence_tiers&quot;: true,
+      &quot;kill_rule&quot;: &quot;fewer than 25 briefs by 2026-12-18&quot;
+    }
+  ],
+  &quot;doctrine&quot;: &quot;evidence-tiered proof, not hype&quot;,
+  &quot;unit_cost&quot;: &quot;$0&quot;,
+  &quot;hosting&quot;: &quot;GitHub Pages&quot;
+}
+</code></pre>
+<h2>Links &amp; backup</h2>
+<ul>
+<li>Proof Embed, live: https://cumulativewebinc.github.io/cwi-proof-embed/</li>
+<li>Proof Embed, source: https://github.com/CumulativeWebInc/cwi-proof-embed</li>
+<li>Sync Briefs, live: https://cumulativewebinc.github.io/cwi-sync-briefs/</li>
+<li>Sync Briefs, source: https://github.com/CumulativeWebInc/cwi-sync-briefs</li>
+<li>Org and all builds: https://github.com/CumulativeWebInc</li>
+</ul>
+<h2>Bring the evidence</h2>
+<p>Subscribe for the kill-rule verdicts — December 18 gets written up honestly either way. Star both repos (<a href="https://github.com/CumulativeWebInc/cwi-proof-embed">cwi-proof-embed</a>, <a href="https://github.com/CumulativeWebInc/cwi-sync-briefs">cwi-sync-briefs</a>) if verifiable beats hype in your book. And supervisors: bring us a claim you'd want proven — <strong>hp@cumulativeweb.com</strong>.</p>
+<p>What's the biggest claim a catalog ever made to you that you wish had come with proof attached?</p></article></body></html>
